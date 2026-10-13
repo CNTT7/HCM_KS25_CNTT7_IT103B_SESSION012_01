@@ -7,7 +7,7 @@ function auditSubscriptions(list) {
     for (let i = 0; i < list.length; i++) {
         const sub = list[i];
         if (sub.daysOverdue > 0) {
-            if (sub.daysOverdue >= 3) {
+            if (sub.daysOverdue > 3) {
                 sub.planTier = 'FREE';
                 sub.deviceLimit = 1;
                 sub.status = 'EXPIRED';
